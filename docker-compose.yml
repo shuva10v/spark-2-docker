@@ -1,0 +1,9 @@
+master:
+  build: spark-master/
+  ports:
+  - "8080:8080"
+  - "7077:7077"
+slave:
+  build: spark-slave/
+  links:
+  - master
